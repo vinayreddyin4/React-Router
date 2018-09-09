@@ -12,6 +12,7 @@ import Navigation from './Components/Navigation';
 import UserForm from './Components/UserForm';
 import UserInput from './Components/UserInput';
 //import App1 from './sample';
+import MyRef from './Components/Reference';
 
 
 class App extends React.Component {
@@ -55,6 +56,10 @@ class App extends React.Component {
 
           <UserInput />
           {/* <App1 /> */}
+          <div>
+            <MyRef />
+          </div>
+
         </div>
       </BrowserRouter>
     )
