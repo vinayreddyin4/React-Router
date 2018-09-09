@@ -12,7 +12,7 @@ class MyRef extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-       console.log(this.refs.first, this.second);
+       console.log(this.refs.first, this.second, this.third);
      
     }
 
@@ -28,6 +28,8 @@ class MyRef extends React.Component {
                 <form onSubmit = {this.handleSubmit}>
                 <input type = "text" defaultValue= "first" ref="first"  onChange={this.update} />
                 <input type="text" defaultValue= "second" ref={input => (this.second = input)} />
+                <input type="text" defaultValue= "third" ref={this.third} />
+
                 <button >submit</button>
                 {this.state.showMe}
                 </form>
