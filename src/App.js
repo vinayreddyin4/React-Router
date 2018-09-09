@@ -13,7 +13,7 @@ import UserForm from './Components/UserForm';
 import UserInput from './Components/UserInput';
 //import App1 from './sample';
 import MyRef from './Components/Reference';
-
+import ReturnAry from './Components/ReturnAry';
 
 class App extends React.Component {
 
@@ -59,7 +59,9 @@ class App extends React.Component {
           <div>
             <MyRef />
           </div>
-
+          <div>
+            <ReturnAry />
+          </div>
         </div>
       </BrowserRouter>
     )
