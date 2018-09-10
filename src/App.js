@@ -14,6 +14,8 @@ import UserInput from './Components/UserInput';
 //import App1 from './sample';
 import MyRef from './Components/Reference';
 import ReturnAry from './Components/ReturnAry';
+import Functional from './Components/Functional';
+import Parent from './Components/ChildToParent';
 
 class App extends React.Component {
 
@@ -49,18 +51,26 @@ class App extends React.Component {
             <Route path = "/contact" component={Contact} />
             <Route component= {Error} />
           </Switch>
+          <hr/>
           <UserForm UserSubmit= {this.UserSubmit} />
           {
             this.state.repos ?  <p>this is the Events Url of John: {this.state.repos} </p> : <p> Please enter John name</p> 
           }
-
+          <hr/>
           <UserInput />
           {/* <App1 /> */}
+          <hr/>
           <div>
             <MyRef />
           </div>
+          <hr/>
           <div>
             <ReturnAry />
+          </div>
+          <hr/>
+          <Functional />
+          <div>
+            <Parent />
           </div>
         </div>
       </BrowserRouter>
