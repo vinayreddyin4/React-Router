@@ -16,6 +16,10 @@ import MyRef from './Components/Reference';
 import ReturnAry from './Components/ReturnAry';
 import Functional from './Components/Functional';
 import Parent from './Components/ChildToParent';
+import Form from './Components/Form';
+import Server from './Components/Server';
+import Post from './Components/Post';
+import Get from './Components/Get';
 
 class App extends React.Component {
 
@@ -35,10 +39,23 @@ class App extends React.Component {
     const repos = res.data.events_url;
     this.setState({ repos })
   })
+  .catch((error) => {
+    console.log(error);
+  });
   }
 
-  
-
+componentDidMount(){
+  axios.post('/user', {
+    firstName: 'Fred',
+    lastName: 'Flintstone'
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+}
 
   render() {
     return( 
@@ -71,6 +88,17 @@ class App extends React.Component {
           <Functional />
           <div>
             <Parent />
+          </div>
+          <Form />
+          <div>
+            <Server />
+          </div>
+          <div>
+            <Post />
+          </div>
+          <hr />
+          <div>
+            <Get />
           </div>
         </div>
       </BrowserRouter>

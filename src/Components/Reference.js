@@ -26,7 +26,7 @@ class MyRef extends React.Component {
         return(
             <div>
                 <form onSubmit = {this.handleSubmit}>
-                <input type = "text" defaultValue= "first" ref="first"  onChange={this.update} />
+                <input type = "number" defaultValue= "first" ref="first"  onChange={this.update} />
                 <input type="text" defaultValue= "second" ref={input => (this.second = input)} />
                 <input type="text" defaultValue= "third" ref={this.third} />
 

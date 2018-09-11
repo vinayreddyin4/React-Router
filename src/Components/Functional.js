@@ -2,8 +2,8 @@ import React from 'react';
 
 const Functional = () => {
 
-    const sayHi = (event) => {
-        alert('hi ');
+    const sayHi = () => {
+        alert('hi');
     }
 
     return(
