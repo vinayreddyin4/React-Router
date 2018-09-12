@@ -20,6 +20,7 @@ import Form from './Components/Form';
 import Server from './Components/Server';
 import Post from './Components/Post';
 import Get from './Components/Get';
+import Validation from './Components/Validation'
 
 class App extends React.Component {
 
@@ -100,6 +101,11 @@ componentDidMount(){
           <div>
             <Get />
           </div>
+          <hr />
+          <div>
+            <Validation />
+            </div>
+          
         </div>
       </BrowserRouter>
     )
