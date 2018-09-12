@@ -12,7 +12,15 @@ import Navigation from './Components/Navigation';
 import UserForm from './Components/UserForm';
 import UserInput from './Components/UserInput';
 //import App1 from './sample';
-
+import MyRef from './Components/Reference';
+import ReturnAry from './Components/ReturnAry';
+import Functional from './Components/Functional';
+import Parent from './Components/ChildToParent';
+import Form from './Components/Form';
+import Server from './Components/Server';
+import Post from './Components/Post';
+import Get from './Components/Get';
+import Validation from './Components/Validation'
 
 class App extends React.Component {
 
@@ -32,10 +40,23 @@ class App extends React.Component {
     const repos = res.data.events_url;
     this.setState({ repos })
   })
+  .catch((error) => {
+    console.log(error);
+  });
   }
 
-  
-
+componentDidMount(){
+  axios.post('/user', {
+    firstName: 'Fred',
+    lastName: 'Flintstone'
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+}
 
   render() {
     return( 
@@ -48,13 +69,43 @@ class App extends React.Component {
             <Route path = "/contact" component={Contact} />
             <Route component= {Error} />
           </Switch>
+          <hr/>
           <UserForm UserSubmit= {this.UserSubmit} />
           {
             this.state.repos ?  <p>this is the Events Url of John: {this.state.repos} </p> : <p> Please enter John name</p> 
           }
-
+          <hr/>
           <UserInput />
           {/* <App1 /> */}
+          <hr/>
+          <div>
+            <MyRef />
+          </div>
+          <hr/>
+          <div>
+            <ReturnAry />
+          </div>
+          <hr/>
+          <Functional />
+          <div>
+            <Parent />
+          </div>
+          <Form />
+          <div>
+            <Server />
+          </div>
+          <div>
+            <Post />
+          </div>
+          <hr />
+          <div>
+            <Get />
+          </div>
+          <hr />
+          <div>
+            <Validation />
+            </div>
+          
         </div>
       </BrowserRouter>
     )
