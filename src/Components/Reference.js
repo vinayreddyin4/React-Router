@@ -25,6 +25,7 @@ class MyRef extends React.Component {
     render() {
         return(
             <div>
+                <h1> Refs</h1>
                 <form onSubmit = {this.handleSubmit}>
                 <input type = "number" defaultValue= "first" ref="first"  onChange={this.update} />
                 <input type="text" defaultValue= "second" ref={input => (this.second = input)} />

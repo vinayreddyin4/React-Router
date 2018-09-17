@@ -19,8 +19,14 @@ import Parent from './Components/ChildToParent';
 import Form from './Components/Form';
 import Server from './Components/Server';
 import Post from './Components/Post';
+import Post1 from './Components/Post1';
+
 import Get from './Components/Get';
+import Get1 from './Components/Get1';
+
 import Validation from './Components/Validation'
+import ClickTest from './Components/ClickTest'
+
 
 class App extends React.Component {
 
@@ -104,6 +110,18 @@ componentDidMount(){
           <hr />
           <div>
             <Validation />
+            </div>
+            <hr/>
+            <div>
+              <Post1 />
+            </div>
+            <hr />
+            <div>
+            <Get1 />
+            </div>
+            <hr />
+            <div>
+              <ClickTest />
             </div>
           
         </div>
