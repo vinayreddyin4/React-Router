@@ -23,6 +23,7 @@ import Post1 from './Components/Post1';
 
 import Get from './Components/Get';
 import Get1 from './Components/Get1';
+import App1 from './Components/Context'
 
 import Validation from './Components/Validation'
 import ClickTest from './Components/ClickTest'
@@ -123,7 +124,10 @@ componentDidMount(){
             <div>
               <ClickTest />
             </div>
-          
+          <hr />
+          <div>
+            <App1 />
+          </div>
         </div>
       </BrowserRouter>
     )

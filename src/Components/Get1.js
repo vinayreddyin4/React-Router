@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 
-import PropTypes from 'prop-types '
 
 class Get1 extends React.Component {
     constructor () {
@@ -52,6 +51,3 @@ class Get1 extends React.Component {
 
 export default Get1;
 
-Greetings.propTypes = {
-    name : PropTypes.string
-}
